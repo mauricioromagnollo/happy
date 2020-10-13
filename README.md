@@ -27,7 +27,8 @@ O objetivo do projeto é apresentar as pessoas quais são os orfanatos existente
   - **[TypeScript]** 
   <br>
   <br>
-  - > **Veja o arquivo [package.json](./src/web/package.json).**
+  
+  > **Veja o arquivo [package.json](./src/web/package.json).**
 
 - ### **AUXILIARES**
  
