@@ -1,6 +1,6 @@
 <div align='center'>
 
-![](./layout/export/logo.png)
+![](./layout/export/banner.png)
 
 ### **Sistema para agendamento de visitas em orfanatos.<br>*"Leve Felicidade para o Mundo"***
 
