@@ -18,7 +18,7 @@ O objetivo do projeto é apresentar as pessoas quais são os orfanatos existente
 
 ## **:computer: TECNOLOGIAS**
 
-- ### **WEB**
+- ### **WEB (FRONT-END)**
 
   - **[React]** 
     - **[React Icons](https://react-icons.github.io/react-icons/)**
@@ -26,11 +26,16 @@ O objetivo do projeto é apresentar as pessoas quais são os orfanatos existente
     - **[Leaflet](https://leafletjs.com/) | [React Leaflet](https://react-leaflet.js.org/)**
   - **[TypeScript]** 
   <br>
-  <br>
-  
   > **Veja o arquivo [package.json](./src/web/package.json).**
 
-- ### **AUXILIARES**
+- ### **SERVER (BACK-END)**
+  - NodeJS
+  - Express
+  - **[TypeScript]** 
+  <br>
+  > **Veja o arquivo [package.json](./src/web/package.json).**
+
+- ### **FERRAMENTAS AUXILIARES**
  
   - **[Whimsical]**
   - **[Google Fonts](https://fonts.google.com/) &rarr; [Nunito](https://fonts.google.com/specimen/Nunito)**
