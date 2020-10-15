@@ -1,4 +1,4 @@
-export interface IOrphanage {
+export interface OrphanageInterface {
   id: string;
   name: string;
   latitude: number;

@@ -1,8 +1,16 @@
-import { IOrphanage } from '../interfaces/IOrphanage';
-import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
+import { 
+  Entity, 
+  Column, 
+  PrimaryGeneratedColumn, 
+  OneToMany,
+  JoinColumn 
+} from 'typeorm';
+
+import { OrphanageInterface } from '../interfaces/OrphanageInterface';
+import { Image } from './Image';
 
 @Entity('ORPHANAGES')
-export class Orphanage implements IOrphanage {
+export class Orphanage implements OrphanageInterface {
   
   @PrimaryGeneratedColumn('increment')
   id: string;
@@ -27,4 +35,10 @@ export class Orphanage implements IOrphanage {
   
   @Column()
   open_on_weekends: boolean;
+
+  @OneToMany(() => Image, image => image.orphanage, {
+    cascade: ['insert', 'update']
+  })
+  @JoinColumn({ name: 'orphanage_id' })
+  images: Image[];
 }
