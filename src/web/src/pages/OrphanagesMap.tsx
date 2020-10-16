@@ -1,12 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FiPlus, FiArrowRight } from 'react-icons/fi';
-import { Map, TileLayer, Marker, Popup } from 'react-leaflet';
+import { Map, Marker, Popup } from 'react-leaflet';
 import Leaflet from 'leaflet';
 
-import 'leaflet/dist/leaflet.css';
-
 import mapMarker from '../assets/images/map-marker.svg';
+import { TileLayerComponent } from '../components/TileLayerComponent';
 
 import '../assets/styles/pages/orphanages-map.css';
 
@@ -41,7 +40,7 @@ export const OrphanagesMap = () => {
           height: '100%'
         }}
       >
-        <TileLayer url="https://a.tile.openstreetmap.org/{z}/{x}/{y}.png" />
+        <TileLayerComponent />
         
         <Marker 
           icon={mapIcon}
