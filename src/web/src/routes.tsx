@@ -7,6 +7,8 @@ import {
 
 import { Landing } from './pages/Landing';
 import { OrphanagesMap } from './pages/OrphanagesMap';
+import { CreateOrphanage } from './pages/CreateOrphanage';
+import { Orphanage } from './pages/Orphanage';
 
 export const Routes = () => {
   return (
@@ -14,6 +16,9 @@ export const Routes = () => {
       <Switch>
         <Route path='/' exact component={Landing} />
         <Route path='/app' component={OrphanagesMap} />
+
+        <Route path='/orphanages/create' component={CreateOrphanage} />
+        <Route path='/orphanages/:id' component={Orphanage} />
       </Switch>
     </BrowserRouter>
   );
