@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import Leaflet from 'leaflet';
+
 import { FiPlus, FiArrowRight } from 'react-icons/fi';
 import { Map, Marker, Popup } from 'react-leaflet';
-import Leaflet from 'leaflet';
 
 import mapMarker from '../assets/images/map-marker.svg';
 import { TileLayerComponent } from '../components/TileLayerComponent';
+import { api } from '../services/api';
 
 import '../assets/styles/pages/orphanages-map.css';
 
@@ -16,7 +18,24 @@ const mapIcon = Leaflet.icon({
   popupAnchor: [170, 2]
 });
 
+interface OrphanageInterface {
+  id: number;
+  latitude: number;
+  longitude: number;
+  name: string;
+}
+
 export const OrphanagesMap = () => {
+  const [orphanages, setOrphanages] = useState<OrphanageInterface[]>([]);
+
+  console.log(orphanages)
+
+  useEffect(() => {
+    api.get('/orphanages').then(response => {
+      setOrphanages(response.data);
+    });
+  }, []);
+
   return (
     <div id="page-map">
       <aside>
@@ -42,17 +61,22 @@ export const OrphanagesMap = () => {
       >
         <TileLayerComponent />
         
-        <Marker 
-          icon={mapIcon}
-          position={[-23.4998629, -46.8543619]}
-        >
-          <Popup closeButton={false} minWidth={240} maxWidth={240} className='map-popup'>
-            Lar das Meninas
-            <Link to='/orphanages/1'>
-              <FiArrowRight size={20} color="#FFF"/>
-            </Link>
-          </Popup>
-        </Marker>
+        {orphanages.map(orphanage => {
+          return (
+            <Marker 
+              icon={mapIcon}
+              position={[orphanage.latitude, orphanage.longitude]}
+              key={orphanage.id}
+            >
+              <Popup closeButton={false} minWidth={240} maxWidth={240} className='map-popup'>
+                {orphanage.name}
+                <Link to={`/orphanages/${orphanage.id}`}>
+                  <FiArrowRight size={20} color="#FFF"/>
+                </Link>
+              </Popup>
+            </Marker>
+          )
+        })}
       
       </Map> 
 
