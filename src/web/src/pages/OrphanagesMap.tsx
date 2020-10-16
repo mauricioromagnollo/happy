@@ -28,8 +28,6 @@ interface OrphanageInterface {
 export const OrphanagesMap = () => {
   const [orphanages, setOrphanages] = useState<OrphanageInterface[]>([]);
 
-  console.log(orphanages)
-
   useEffect(() => {
     api.get('/orphanages').then(response => {
       setOrphanages(response.data);
