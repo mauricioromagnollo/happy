@@ -19,26 +19,36 @@ O objetivo do projeto é apresentar as pessoas quais são os orfanatos existente
 ## **:computer: TECNOLOGIAS**
 
 - ### **WEB (FRONT-END)**
-
   - **[React]** 
     - **[React Icons](https://react-icons.github.io/react-icons/)**
     - **[React Router Dom](https://reactrouter.com/web/guides/quick-start)**
     - **[Leaflet](https://leafletjs.com/) | [React Leaflet](https://react-leaflet.js.org/)**
   - **[TypeScript]** 
-  <br>
-  > **Veja o arquivo [package.json](./src/web/package.json).**
+  
+  Veja o arquivo [package.json](./src/web/package.json).
 
 - ### **SERVER (BACK-END)**
-  - NodeJS
-  - Express
+  - **[NodeJS](https://nodejs.org/en/)**
   - **[TypeScript]** 
-  <br>
-  > **Veja o arquivo [package.json](./src/web/package.json).**
+    - **[ts-node-dev](https://github.com/whitecolor/ts-node-dev)**
+  - **[Express](https://expressjs.com/)**
+    - **[express-async-errors](https://www.npmjs.com/package/express-async-errors)**
+    - **[Cors](http://expressjs.com/en/resources/middleware/cors.html)**
+    - **[Multer](https://github.com/expressjs/multer)**
+  - **[DotENV](https://github.com/motdotla/dotenv)**
+  - **[TypeORM](https://typeorm.io/#/)**
+  - **[SQLite](https://www.npmjs.com/package/sqlite3)**
+  - **[Yup](https://github.com/jquense/yup)**
+  
+  Veja o arquivo [package.json](./src/server/package.json).
 
 - ### **FERRAMENTAS AUXILIARES**
  
   - **[Whimsical]**
-  - **[Google Fonts](https://fonts.google.com/) &rarr; [Nunito](https://fonts.google.com/specimen/Nunito)**
+  - **[Figma](https://www.figma.com/)**
+  - **[Google Fonts](https://fonts.google.com/) ( [Nunito](https://fonts.google.com/specimen/Nunito) )**
+  - **[Insomnia](https://insomnia.rest/)**
+  - **[Beekeeper Studio](https://www.beekeeperstudio.io/)**
 
 ## **:page_with_curl: LICENÇA**
 
@@ -149,5 +159,17 @@ Body: http://localhost:3333/users/ (Buscar dados de um formulário...); => reque
 # Recurso
 
 ... 
+
+# Criando uma migration para criação de orfanatos:
+$ yarn typeorm migration:create -n create_orphanages
+
+# Migration para criação da tabela de imagens:
+$ yarn typeorm migration:create -n create_images
+
+# Executando a criação da migration:
+$ yarn typeorm migration:run
+
+# Desfazer a última migration feita:
+$ yarn typeorm migration:revert
 
 --->
