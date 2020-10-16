@@ -23,7 +23,8 @@ O objetivo do projeto é apresentar as pessoas quais são os orfanatos existente
     - **[React Icons](https://react-icons.github.io/react-icons/)**
     - **[React Router Dom](https://reactrouter.com/web/guides/quick-start)**
     - **[Leaflet](https://leafletjs.com/) | [React Leaflet](https://react-leaflet.js.org/)**
-  - **[TypeScript]** 
+  - **[TypeScript]**
+  - **[Axios](https://github.com/axios/axios)** 
   
   Veja o arquivo [package.json](./src/web/package.json).
 
