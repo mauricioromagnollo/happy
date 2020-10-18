@@ -18,6 +18,7 @@
     "react-leaflet": "^2.7.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3",
+    "styled-components": "^5.2.0",
     "typescript": "~3.7.2"
   },
   "scripts": {
@@ -43,6 +44,7 @@
   },
   "devDependencies": {
     "@types/react-leaflet": "^2.5.2",
-    "@types/react-router-dom": "^5.1.6"
+    "@types/react-router-dom": "^5.1.6",
+    "@types/styled-components": "^5.1.4"
   }
 }
