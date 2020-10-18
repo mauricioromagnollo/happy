@@ -88,3 +88,20 @@ Esse repositório está licenciado pela **GPL-3.0 LICENSE**. Para mais informaç
 [Whimsical]: https://whimsical.com/
 [React]: https://reactjs.org/
 [TypeScript]: https://www.typescriptlang.org/
+
+<!-- 
+# Criar uma migration:
+$ yarn typeorm migration:run
+
+# Criando uma migration para criação de orfanatos:
+$ yarn typeorm migration:create -n create_orphanages
+
+# Migration para criação da tabela de imagens:
+$ yarn typeorm migration:create -n create_images
+
+# Executando a criação da migration:
+$ yarn typeorm migration:run
+
+# Desfazer a última migration feita:
+$ yarn typeorm migration:revert
+--->
